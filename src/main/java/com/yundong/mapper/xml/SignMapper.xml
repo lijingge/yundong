@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yundong.mapper.SignMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.yundong.entity.Sign">
+		<result column="id" property="id" />
+		<result column="userid" property="userid" />
+		<result column="signnum" property="signnum" />
+		<result column="continuous" property="continuous" />
+		<result column="signtime" property="signtime" />
+		<result column="integral" property="integral" />
+	</resultMap>
+
+</mapper>
