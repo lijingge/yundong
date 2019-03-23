@@ -11,5 +11,10 @@
 		<result column="signtime" property="signtime" />
 		<result column="integral" property="integral" />
 	</resultMap>
-
+	<sql id="Base_Column_List">
+		id,userid,signnum,continuous,signtime,integral
+	</sql>
+	<select id="selectbyuid" parameterType="string" resultMap="BaseResultMap">
+		select <include refid="Base_Column_List"/> from sign where id=#{id} order by signtime desc limit 0,1
+	</select>
 </mapper>

@@ -1,9 +1,9 @@
 package com.yundong.service.impl;
 
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.yundong.entity.Consumption;
 import com.yundong.mapper.ConsumptionMapper;
 import com.yundong.service.ConsumptionService;
-import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**

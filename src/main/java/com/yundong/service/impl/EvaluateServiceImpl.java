@@ -3,7 +3,7 @@ package com.yundong.service.impl;
 import com.yundong.entity.Evaluate;
 import com.yundong.mapper.EvaluateMapper;
 import com.yundong.service.EvaluateService;
-import com.baomidou.mybatisplus.service.impl.ServiceImpl;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**

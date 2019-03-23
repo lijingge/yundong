@@ -3,7 +3,7 @@ package com.yundong.service.impl;
 import com.yundong.entity.Userlog;
 import com.yundong.mapper.UserlogMapper;
 import com.yundong.service.UserlogService;
-import com.baomidou.mybatisplus.service.impl.ServiceImpl;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**

@@ -3,7 +3,7 @@ package com.yundong.service.impl;
 import com.yundong.entity.Vipclass;
 import com.yundong.mapper.VipclassMapper;
 import com.yundong.service.VipclassService;
-import com.baomidou.mybatisplus.service.impl.ServiceImpl;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**

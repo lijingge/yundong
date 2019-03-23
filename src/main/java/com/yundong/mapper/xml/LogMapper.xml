@@ -9,5 +9,11 @@
 		<result column="details" property="details" />
 		<result column="logtime" property="logtime" />
 	</resultMap>
-
+<sql id="Base_Column_List">
+	id,userid,details,logtime
+</sql>
+	<insert id="addlogs" parameterType="com.yundong.entity.Log">
+		insert into log (userid,details,logtime)
+		values (#{userid,jdbcType=INTEGER}, #{details,jdbcType=INTEGER},now())
+	</insert>
 </mapper>

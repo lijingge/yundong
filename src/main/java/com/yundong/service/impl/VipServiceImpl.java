@@ -1,9 +1,9 @@
 package com.yundong.service.impl;
 
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.yundong.entity.Vip;
 import com.yundong.mapper.VipMapper;
 import com.yundong.service.VipService;
-import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**
@@ -16,5 +16,5 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class VipServiceImpl extends ServiceImpl<VipMapper, Vip> implements VipService {
-	
+
 }

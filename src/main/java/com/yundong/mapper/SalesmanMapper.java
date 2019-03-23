@@ -1,7 +1,7 @@
 package com.yundong.mapper;
 
 import com.yundong.entity.Salesman;
-import com.baomidou.mybatisplus.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
  * <p>

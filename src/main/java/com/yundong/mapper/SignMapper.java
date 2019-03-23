@@ -1,7 +1,7 @@
 package com.yundong.mapper;
 
 import com.yundong.entity.Sign;
-import com.baomidou.mybatisplus.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
  * <p>
@@ -13,4 +13,5 @@ import com.baomidou.mybatisplus.mapper.BaseMapper;
  */
 public interface SignMapper extends BaseMapper<Sign> {
 
+    Sign selectbyuid(int id);
 }

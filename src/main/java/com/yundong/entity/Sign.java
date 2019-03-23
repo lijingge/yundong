@@ -1,8 +1,8 @@
 package com.yundong.entity;
 
 import java.util.Date;
-import com.baomidou.mybatisplus.activerecord.Model;
-import com.baomidou.mybatisplus.annotations.TableName;
+import com.baomidou.mybatisplus.extension.activerecord.Model;
+import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
 
 /**

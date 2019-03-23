@@ -1,7 +1,7 @@
 package com.yundong.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.yundong.entity.Coachinfo;
-import com.baomidou.mybatisplus.mapper.BaseMapper;
 
 /**
  * <p>

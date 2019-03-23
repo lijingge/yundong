@@ -2,6 +2,7 @@ package com.yundong.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * <p>
@@ -11,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @author yundong
  * @since 2019-03-21
  */
-@Controller
-@RequestMapping("/yundong/log")
+@RestController
+@RequestMapping("/api/v1")
 public class LogController {
 	
 }

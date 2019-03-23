@@ -11,4 +11,15 @@
 		<result column="falg" property="falg" />
 	</resultMap>
 
+	<sql id="Base_Column_List">
+		id,phone,passwoad,usertype,falg
+	</sql>
+	<select id="selectPhone" parameterType="string" resultMap="BaseResultMap">
+		select <include refid="Base_Column_List"/> from user where phone = #{phone}
+	</select>
+	<update id="updateById" parameterType="com.yundong.entity.User">
+		update user
+		set passwoad = #{passwoad,jdbcType=VARCHAR}
+		where id = #{id,jdbcType=INTEGER}
+	</update>
 </mapper>

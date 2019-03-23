@@ -1,7 +1,7 @@
 package com.yundong.mapper;
 
 import com.yundong.entity.Userinfo;
-import com.baomidou.mybatisplus.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
  * <p>
@@ -13,4 +13,5 @@ import com.baomidou.mybatisplus.mapper.BaseMapper;
  */
 public interface UserinfoMapper extends BaseMapper<Userinfo> {
 
+    Userinfo selectByUid(int uid);
 }

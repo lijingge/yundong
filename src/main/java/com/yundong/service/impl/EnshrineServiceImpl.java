@@ -3,7 +3,7 @@ package com.yundong.service.impl;
 import com.yundong.entity.Enshrine;
 import com.yundong.mapper.EnshrineMapper;
 import com.yundong.service.EnshrineService;
-import com.baomidou.mybatisplus.service.impl.ServiceImpl;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**

@@ -3,7 +3,7 @@ package com.yundong.service.impl;
 import com.yundong.entity.Profession;
 import com.yundong.mapper.ProfessionMapper;
 import com.yundong.service.ProfessionService;
-import com.baomidou.mybatisplus.service.impl.ServiceImpl;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
 /**

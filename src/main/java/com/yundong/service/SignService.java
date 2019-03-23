@@ -1,7 +1,8 @@
 package com.yundong.service;
 
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.yundong.common.vo.Result;
 import com.yundong.entity.Sign;
-import com.baomidou.mybatisplus.service.IService;
 
 /**
  * <p>
@@ -12,5 +13,8 @@ import com.baomidou.mybatisplus.service.IService;
  * @since 2019-03-21
  */
 public interface SignService extends IService<Sign> {
-	
+
+    Result addsign(String token);
+
+    Result findsign(String token);
 }

@@ -10,26 +10,16 @@ import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 
-public class JedisUtil implements Serializable {
-    private String host;
-    private int port;
-    private String password;
-    private Jedis jedis;
+public class JedisUtil {
     private JedisPool jedisPool;
+    private Jedis jedis;
 
-    public JedisUtil(String host, int port, String password) {
-        this.host = host;
-        this.port = port;
-        this.password = password;
-        jedis=new Jedis(host,port);
-        jedis.auth(password);
-    }
 
-    public JedisUtil(JedisPool jedisPool, String password) {
-        this.jedisPool = jedisPool;
-        this.password=password;
+
+    public JedisUtil(String host, int port, String pass) {
+        jedisPool=new JedisPool(host,port);
         jedis=jedisPool.getResource();
-        jedis.auth(password);
+        jedis.auth(pass);
     }
 
     public void addStr(String key,String value){
