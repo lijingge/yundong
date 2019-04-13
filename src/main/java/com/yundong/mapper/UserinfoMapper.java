@@ -14,4 +14,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 public interface UserinfoMapper extends BaseMapper<Userinfo> {
 
     Userinfo selectByUid(int uid);
+
+    int adduserinfo(Userinfo userinfo);
+
+    void updateuserinfo(Userinfo userinfo);
 }

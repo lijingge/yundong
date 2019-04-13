@@ -11,7 +11,6 @@ public class GetPageData {
         } else {
             pagenum = Integer.valueOf(pageNum);
         }
-
         return pagenum;
     }
 
@@ -23,7 +22,6 @@ public class GetPageData {
         } else {
             pagesize = Integer.valueOf(pageSize);
         }
-
         return pagesize;
     }
 }

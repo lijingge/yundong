@@ -16,5 +16,5 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class SalesmanServiceImpl extends ServiceImpl<SalesmanMapper, Salesman> implements SalesmanService {
-	
+
 }

@@ -1,6 +1,7 @@
 package com.yundong.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.yundong.common.vo.Result;
 import com.yundong.entity.Userinfo;
 
 /**
@@ -12,5 +13,8 @@ import com.yundong.entity.Userinfo;
  * @since 2019-03-21
  */
 public interface UserinfoService extends IService<Userinfo> {
-	
+
+    Result updateuserinfo(String token, Userinfo userinfo);
+
+    Result finduserinfo(String token);
 }

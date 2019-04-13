@@ -20,4 +20,10 @@ public interface UserService extends IService<User> {
     Result updatepass(String token, String password);
 
     Result sendMesage(String phone, String ip) throws Exception;
+
+    Result exit(String token);
+
+    Result updatetyoe(Integer id, Integer usertype);
+
+    Result updateflag(Integer id);
 }

@@ -15,4 +15,13 @@ public interface UserMapper extends BaseMapper<User> {
 
     User selectPhone(String phone);
 
+    void insertSelective(User user);
+
+    void updatepass(User user);
+
+    User selectid(Integer id);
+
+    void updateId(User user1);
+
+    void updatetype(User user1);
 }

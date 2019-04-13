@@ -16,10 +16,10 @@ public class Message {
     //提取手机号码生成的验证码 tel手机号码，code随机验证码
     public static boolean sendCode(String phone , String code )throws Exception{
         String code_Str = URLEncoder.encode("#code#="+code, "utf-8");
-        System.out.println(code_Str);
+        System.out.println("code_Str"+code_Str);
         //准备URL对象，将接口包装在此对象中
         URL url = new URL("http://v.juhe.cn/sms/send?mobile="+phone+
-                "&tpl_id=模板id&tpl_value="+code_Str+"&key=84d25b114aa75009773ad058ba75b8bd");
+                "&tpl_id=145699&tpl_value="+code_Str+"&key=84d25b114aa75009773ad058ba75b8bd");
         //打开对象
         URLConnection connection = url.openConnection();
         //向服务器发送连接请求
@@ -34,7 +34,7 @@ public class Message {
         System.out.println(buffer);
         //关闭连接对象
         bufferedReader.close();
-        if(buffer.toString().indexOf("\"erroe_code\":0")>=0) {
+        if(buffer.toString().indexOf("\"error_code\":0")>=0) {
             return true;//当调用改方法时返回true短信就发送成功了
         }
         return false;

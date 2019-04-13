@@ -10,12 +10,14 @@ import java.io.ByteArrayInputStream;
 import java.util.Calendar;
 import java.util.List;
 
+
 */
 /**
  * @Author gfc
  * @Date Created in 2018/7/27 11:45
  * 基于阿里云的oss      对象存储
  *//*
+
 
 public class OSSUtil {
 
@@ -31,23 +33,27 @@ public class OSSUtil {
         this.bucketName = bucketName;
     }
 
-    */
+
+*/
 /**
      * 创建客户端
      *
      * @return
      *//*
 
+
     private OSS createClient() {
         return new OSSClientBuilder().build(endpoint, accessKeyId, accessKeySecret);
     }
 
-    */
+
+*/
 /**
      * 获取文件列表
      *
      * @return
      *//*
+
 
     public List<OSSObjectSummary> fileList() {
         OSS client = createClient();
@@ -59,10 +65,12 @@ public class OSSUtil {
         return sums;
     }
 
-    */
+
+*/
 /**
      * 上传文件
      *//*
+
 
     public String fileUp(String filename, byte[] data) {
         OSS client = createClient();
@@ -72,10 +80,12 @@ public class OSSUtil {
         return client.generatePresignedUrl(bucketName, filename, calendar.getTime()).toString();
     }
 
-    */
+
+*/
 /**
      * 删除文件
      *//*
+
 
     public void delFile(String key) {
         OSS client = createClient();
@@ -83,10 +93,12 @@ public class OSSUtil {
         client.shutdown();
     }
 
-    */
+
+*/
 /**
      * 删除文件 多个文件
      *//*
+
 
     public void delFiles(List<String> keys) {
         // 创建OSSClient实例。
@@ -98,20 +110,24 @@ public class OSSUtil {
         ossClient.shutdown();
     }
 
-    */
+
+*/
 /**
      * 验证是否存在
      *//*
+
 
     public boolean isHave(String objName) {
         OSS client = createClient();
         return client.doesObjectExist(bucketName, objName);
     }
 
-    */
+
+*/
 /**
      * 创建文件夹
      *//*
+
 
     public void createDir(String dirName) {
         if (!isHave(dirName)) {
@@ -120,4 +136,5 @@ public class OSSUtil {
             client.shutdown();
         }
     }
-}*/
+}
+*/

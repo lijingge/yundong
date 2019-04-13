@@ -13,4 +13,9 @@ import com.yundong.entity.Coachinfo;
  */
 public interface CoachinfoMapper extends BaseMapper<Coachinfo> {
 
+    Coachinfo selectByUid(int uid);
+
+    int adduserinfo(Coachinfo coachinfo);
+
+    void updateuserinfo(Coachinfo coachinfo);
 }

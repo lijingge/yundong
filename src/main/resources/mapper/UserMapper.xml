@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yundong.mapper.UserMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="com.yundong.entity.User">
+		<id column="id" property="id" />
+		<result column="phone" property="phone" />
+		<result column="passwoad" property="passwoad" />
+		<result column="usertype" property="usertype" />
+		<result column="falg" property="falg" />
+	</resultMap>
+
+	<sql id="Base_Column_List">
+		id,phone,passwoad,usertype,falg
+	</sql>
+	<select id="selectPhone" parameterType="string" resultMap="BaseResultMap">
+		select id,phone,passwoad,usertype,falg from user where phone = #{phone}
+	</select>
+	<update id="updatepass" parameterType="com.yundong.entity.User">
+		update user
+		set passwoad = #{passwoad,jdbcType=VARCHAR}
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+	<insert id="insertSelective" parameterType="com.yundong.entity.User">
+		insert into user
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				id,
+			</if>
+			<if test="phone != null">
+				phone,
+			</if>
+			<if test="passwoad != null">
+				passwoad,
+			</if>
+			<if test="usertype != null">
+				usertype,
+			</if>
+			<if test="falg != null">
+				falg,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="id != null">
+				#{id,jdbcType=INTEGER},
+			</if>
+			<if test="phone != null">
+				#{phone,jdbcType=VARCHAR},
+			</if>
+			<if test="passwoad != null">
+				#{passwoad,jdbcType=VARCHAR},
+			</if>
+			<if test="usertype != null">
+				#{usertype,jdbcType=VARCHAR},
+			</if>
+			<if test="falg != null">
+				#{falg,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+	<select id="selectid" parameterType="int" resultMap="BaseResultMap">
+		select id,phone,passwoad,usertype,falg from user where id = #{id}
+	</select>
+	<update id="updatetype" parameterType="com.yundong.entity.User">
+		update user
+		set usertype = #{usertype,jdbcType=VARCHAR}
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+	<update id="updateId" parameterType="com.yundong.entity.User">
+		update user
+		set falg = #{falg,jdbcType=VARCHAR}
+		where id = #{id,jdbcType=INTEGER}
+	</update>
+</mapper>

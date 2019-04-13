@@ -1,4 +1,3 @@
-/*
 package com.yundong.common.config;
 
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
@@ -6,11 +5,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.filter.CharacterEncodingFilter;
 
-*/
+
 /**
  *@Author feri
  *@Date Created in 2019/1/19 15:03
- *//*
+ */
 
 @Configuration
 public class filterConfig {
@@ -24,4 +23,4 @@ public class filterConfig {
         return filterRegistration;
     }
 }
-*/
+

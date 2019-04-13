@@ -13,4 +13,9 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface VipMapper extends BaseMapper<Vip> {
 
+    void addvip(Vip vip);
+
+    void updatevip(Vip vip);
+
+    Vip findvip(Integer userid);
 }

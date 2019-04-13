@@ -24,6 +24,7 @@ public class Enshrine extends Model<Enshrine> {
 	private Integer userid;
 	private Integer coachid;
 
+	private Coachinfo coachinfo;
 
 	public Integer getId() {
 		return id;
@@ -54,4 +55,11 @@ public class Enshrine extends Model<Enshrine> {
 		return this.id;
 	}
 
+	public Coachinfo getCoachinfo() {
+		return coachinfo;
+	}
+
+	public void setCoachinfo(Coachinfo coachinfo) {
+		this.coachinfo = coachinfo;
+	}
 }

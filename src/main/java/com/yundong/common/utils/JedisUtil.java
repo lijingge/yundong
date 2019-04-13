@@ -190,6 +190,8 @@ public class JedisUtil {
             jedis.close();
         }
     }
-
+    public boolean isHave(String key,String field){
+        return jedis.hexists(key,field);
+    }
 
 }

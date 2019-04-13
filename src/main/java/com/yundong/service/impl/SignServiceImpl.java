@@ -4,6 +4,8 @@ import com.alibaba.fastjson.JSON;
 import com.yundong.common.constant.Constant;
 import com.yundong.common.token.Token;
 import com.yundong.common.utils.EncrypUtil;
+import com.yundong.common.utils.JedisUtil;
+import com.yundong.common.utils.TokenUtil;
 import com.yundong.common.vo.Result;
 import com.yundong.common.vo.ResultUtil;
 import com.yundong.entity.Sign;
@@ -32,10 +34,15 @@ public class SignServiceImpl extends ServiceImpl<SignMapper, Sign> implements Si
     private SignMapper dao;
     @Autowired
     private UserinfoMapper userinfodao;
+    @Autowired
+    private JedisUtil jedisUtil;
     @Override
     public Result addsign(String token) {
         Token token1 = JSON.parseObject(EncrypUtil.decAesStr(Constant.TOKENKEY,token),Token.class);
         Userinfo userinfo = userinfodao.selectByUid(token1.getId());
+        if (userinfo == null){
+            return ResultUtil.setOtherERROR("请完善用户资料");
+        }
         Calendar now=Calendar.getInstance();
         Calendar lastTime=Calendar.getInstance();
         Random random=new Random();
@@ -74,7 +81,11 @@ public class SignServiceImpl extends ServiceImpl<SignMapper, Sign> implements Si
     @Override
     public Result findsign(String token) {
         Token token1 = JSON.parseObject(EncrypUtil.decAesStr(Constant.TOKENKEY,token),Token.class);
+        System.out.println(token1.getId());
         Userinfo userinfo = userinfodao.selectByUid(token1.getId());
+        if (userinfo == null){
+            return ResultUtil.setOtherERROR("请完善用户资料");
+        }
         Calendar now=Calendar.getInstance();
         Calendar lastTime=Calendar.getInstance();
         if (userinfo != null){

@@ -12,6 +12,6 @@ import org.springframework.context.annotation.Configuration;
 public class JedisConfig {
     @Bean
     public JedisUtil creareJedis(){
-        return new JedisUtil("39.105.189.141",6379,"qfjava");
+        return new JedisUtil("47.105.91.55",6378,"123456");
     }
 }

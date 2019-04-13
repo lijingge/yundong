@@ -3,6 +3,8 @@ package com.yundong.mapper;
 import com.yundong.entity.Enshrine;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
+import java.util.List;
+
 /**
  * <p>
   *  Mapper 接口
@@ -13,4 +15,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface EnshrineMapper extends BaseMapper<Enshrine> {
 
+    void addenshrine(Enshrine enshrine);
+
+    List<Enshrine> selectenshrine(Integer userid);
 }

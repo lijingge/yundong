@@ -1,6 +1,8 @@
 package com.yundong.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.yundong.common.token.Token;
+import com.yundong.common.vo.Result;
 import com.yundong.entity.Coachinfo;
 
 /**
@@ -12,5 +14,8 @@ import com.yundong.entity.Coachinfo;
  * @since 2019-03-21
  */
 public interface CoachinfoService extends IService<Coachinfo> {
-	
+
+    Result addcoachinfo(String token, Coachinfo coachinfo);
+
+    Result findByuid(String token);
 }
